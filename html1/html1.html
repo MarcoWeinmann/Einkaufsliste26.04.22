@@ -2,9 +2,92 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Einkaufsliste</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <style> dt {
+        background-color: #ADD8E6
+    }</style>
 </head>
+<body>
+<header>
+    <!-- ToDo: Schreibe innerhalb der html-Tags dieses Dokumentes die Lösungen für Aufgabe1, Aufgabe2 und Aufgabe3 -->
+    <h1>Einkaufsliste</h1>
+    <nav>
+        <input type="search" placeholder="Artikel hinzufügen" style="vertical-align: bottom"/>
+        <button>
+            <span class="material-symbols-outlined">
+                add_circle
+            </span>
+        </button>
+        <hr/>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Einkaufen<i style="float:right" class="material-icons">expand_less</i>
+        </h2>
+        <dl>
+            <dt style="background-color: lightblue"><h4>
+                Obst & Gemüse<i style="float:right" class="material-icons">expand_less</i></h4>
+            </dt>
+            <dd>
+                <label>
+                    <input type="checkbox"/>
+                    Brokkoli</label>
+            </dd>
+            <dt><h4>Getreideprodukte<i style="float:right" class="material-icons">expand_less</i>
+            </h4>
+            </dt>
+            <dd>
+                <label>
+                    <input type="checkbox"/>
+                    Reis</label>
+            </dd>
+            <dt><h4>Milchprodukte<i style="float:right" class="material-icons">expand_less</i>
+            </h4>
+            </dt>
+            <dd>
+                <label>
+                    <input type="checkbox"/>
+                    Streukäse</label>
+            </dd>
+        </dl>
+        <hr>
+    </section>
+    <section>
+        <dl>
+            <h2>Erledigt<i style="float:right" class="material-icons">expand_less</i>
+            </h2>
+            <dt><h4>Hülsenfrüchte<i style="float:right" class="material-icons">expand_less</i>
+            </h4>
+            </dt>
+            <dd>
+                <label>
+                    <input type="checkbox" checked/>
+                    <s>Tofu</s></label>
+            </dd>
+        </dl>
+        <hr/>
+    </section>
+</main>
+<footer>
 
-<!-- ToDo: Schreibe innerhalb der html-Tags dieses Dokumentes die Lösungen für Aufgabe1, Aufgabe2 und Aufgabe3 -->
-
+    <nav>
+        <button><span class="material-symbols-outlined">
+bookmark_add
+</span> Gruppen
+        </button>
+        <button><span class="material-symbols-outlined">
+                sort
+            </span>Sortieren
+        </button>
+        <button><span class="material-symbols-outlined">
+                settings
+                </span>Einstellungen
+        </button>
+    </nav>
+</footer>
+</body>
 </html>
