@@ -9,7 +9,15 @@ function aufgabe1() {
   console.debug("Aufgabe 1 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
-
+const pizza = {
+    title: "Funghi",
+    num: "18",
+   description: "Pizza-Liste",
+   places: "3",
+    belag: ["Käse", "Pilze", "Tomatensoße"],
+      bewertung: "8/10",
+  magIch: "true",
+}
   console.debug(pizza)
 }
 
@@ -26,9 +34,9 @@ function aufgabe2() {
   }
 
   //ToDo: füge ab hier in den debugs Deinen Code ein
-  console.debug()
-  console.debug()
-  console.debug()
+  console.debug(Object.keys(ghibli)),
+  console.debug(Object.values(ghibli))
+  console.debug(Object.entries(ghibli))
 }
 
 /**
