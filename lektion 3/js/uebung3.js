@@ -46,7 +46,16 @@ function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+const kuenstler = {
+    vorname: "Bob",
+    nachname: "Marley",
+    geboren: "06.02.1945",
+    gestorben: "11.05.1981",
+    taetigkeit: "Saenger",
+    lieblingssong: "Jamming",
 
+}
+console.debug(kuenstler)
   for (let key of Object.keys(kuenstler)) {
     console.debug(key + ": " + kuenstler[key])
   }
