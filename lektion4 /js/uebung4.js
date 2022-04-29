@@ -11,6 +11,11 @@ function aufgabe1() {
   let ampel = "gruen";
 
   //ToDo: füge ab hier deinen Code ein
+  // ampel.gruen ist ´true´
+  if (ampel == "gruen") {
+    console.debug("Du darfst fahren!")
+    // zu ampel verschieben
+  }
 
 }
 
@@ -23,6 +28,9 @@ function aufgabe2() {
   let ampel = "rot";
 
   //ToDo: füge ab hier deinen Code ein
+  if (ampel != "gruen") {
+    console.debug("Du musst halten!")
+  }
 }
 
 /**
@@ -34,6 +42,12 @@ function aufgabe3() {
   let ampel = "gruen";
 
   //ToDo: füge ab hier Deinen Code ein
+  if (ampel == "gruen") {
+    console.debug("Du darfst fahren!")
+  }
+  else {
+    console.debug("Du musst halten!")
+  }
 }
 
 /**
@@ -42,9 +56,26 @@ function aufgabe3() {
 function aufgabe4() {
   console.debug("Aufgabe 4 ==========================");
 
-  let tag = 5;
+  let tag = 3;
 
   //ToDo: füge ab hier Deinen Code ein
+  switch (tag) {
+    case 1: console.debug("heute ist montag!")
+          break
+    case 2: console.debug("heute ist dienstag!")
+          break
+    case 3: console.debug("heute ist mittwoch!")
+          break
+    case 4: console.debug("heute ist donnerstag!")
+          break
+    case 5: console.debug("heute ist freitag!")
+          break
+    case 6: console.debug("heute ist samstag!")
+          break
+    case 7: console.debug("heute ist sonntag!")
+        break
+    defafult : console.debug("ist außerhalb der range!")
+  }
 }
 
 /**
