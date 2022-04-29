@@ -60,7 +60,6 @@ console.debug(kuenstler)
     console.debug(key + ": " + kuenstler[key])
   }
 }
-
 /**
  * Hauptfunktion, in der die Aufgaben aufgerufen werden
  */
