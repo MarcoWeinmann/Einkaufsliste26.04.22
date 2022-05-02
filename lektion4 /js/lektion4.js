@@ -7,7 +7,12 @@
  * 1) 1) Erstelle eine if-Anweisung, die abfragt, ob ein bestimmter Artikel bereits gekauft wurde */
 function artikel_Gekauft() {
     //ToDo: füge ab hier deinen Code ein
+    let artikelName = "Streukäse"
+    let artikelGekauft = true
+    if (artikelGekauft == true) {
+        console.debug("[Artikel]", artikelName,"wurde gekauft")
 
+    }
 }
 
 
@@ -17,6 +22,11 @@ function artikel_Gekauft() {
  */
 function artikel_Hinzufuegen() {
     //ToDo: füge ab hier deinen Code ein
+    let gruppenName = "Getreide"
+    let artikelName = "Quinoa"
+if (artikelName != "") {
+    console.debug([gruppenName],artikelName, "hinzugefügt")
+}
 
 }
 
@@ -26,6 +36,14 @@ function artikel_Hinzufuegen() {
  */
 function gruppe_Hinzufuegen() {
     // ToDo: füge ab hier deinen Code ein
+    let gleicheGruppen = [];
+    let neueGruppe = "Getränke"
+    if (gleicheGruppen.length == 0) {
+        console.debug("[App]", "Gruppe", neueGruppe, "hinzugefügt")}
+    else { console.debug("[App]", neueGruppe, "existiert schon!")
+
+    }
+
 
 }
 
@@ -34,7 +52,20 @@ function gruppe_Hinzufuegen() {
  */
 function einkaufsliste_Vorhanden() {
     // ToDo: füge ab hier deinen Code ein
+    let milchProdukte = ["Milch", "Joghurt", "Sahne"]
+    let artikel = "Eisbergsalat"
+    switch (artikel) {
+        case "Milch":
+        case "Joghurt":
+        case "Sahne":
+            console.debug(artikel, "ist ein Milchprodukt")
+    break
+        default:
+            console.debug("Artikel", artikel, "ist KEIN Milchprodukt")
+    break
 
+
+    }
 }
 
 /**
@@ -42,7 +73,13 @@ function einkaufsliste_Vorhanden() {
  */
 function zusatz_indexOf() {
     // ToDo: füge ab hier deinen Code ein
+let einkaufsliste = ["Tofu", "Milch", "Butter", "Honig"]
+    let tomatenIndex = -1
 
+    tomatenIndex = arr.indexOf( searchElement: "Tomaten")
+    if ()
+
+    console.debug("Tomaten ist nicht in der Liste vorhanden")
 }
 
 export {
