@@ -73,13 +73,20 @@ function einkaufsliste_Vorhanden() {
  */
 function zusatz_indexOf() {
     // ToDo: füge ab hier deinen Code ein
+
 let einkaufsliste = ["Tofu", "Milch", "Butter", "Honig"]
-    let tomatenIndex = -1
+    let tomaten
+    tomaten = "-1"
 
-    tomatenIndex = arr.indexOf( searchElement: "Tomaten")
-    if ()
+    tomaten = einkaufsliste.indexOf("Tomaten")
+    if (tomaten == -1){
+        console.debug("Tomaten sind nicht in der Einkaufsliste")
 
-    console.debug("Tomaten ist nicht in der Liste vorhanden")
+    }
+    else{
+        console.debug("Tomaten sind in der Einkaufsliste")
+    }
+
 }
 
 export {
