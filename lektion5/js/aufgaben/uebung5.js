@@ -80,7 +80,17 @@ function aufgabe6() {
   console.debug("Aufgabe 6 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+  let i=1
+  do {
+    console.debug(i);
+    i++
+  }
+    while (i<6)
+
+
+
 }
+
 
 /**
  * 7) Zur Veranschaulichung. Du musst nicht selbst coden!
@@ -90,7 +100,7 @@ function aufgabe7() {
 
   let i=1
   do {
-    console.debug(i)
+   // console.debug(i)
     i++
   }
   while(i<0)
