@@ -100,7 +100,7 @@ function aufgabe7() {
 
   let i=1
   do {
-   // console.debug(i)
+    console.debug(i)
     i++
   }
   while(i<0)
