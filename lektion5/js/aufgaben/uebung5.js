@@ -9,8 +9,10 @@ function aufgabe1() {
   console.debug("Aufgabe 1 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+  for (let i = 1; i < 6; i++) {
+    console.log(i + "Durchlauf Nummer:", i)
+  }
 }
-
 /**
  * 2) Füge break ein.
  */
@@ -20,6 +22,7 @@ function aufgabe2() {
   for(let i=1; i<6; i++) {
     if(i==3) {
       //ToDo: füge ab hier Deinen Code ein
+break
     }
     console.debug("Hallo Nummer: " + i)
   }
