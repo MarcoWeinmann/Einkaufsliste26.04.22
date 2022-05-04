@@ -24,6 +24,11 @@ function allesAuflisten() {
     let gemueseliste = ["Brokoli", "Zwiebeln", "Salat"]
     let getreideListe = ["Reis", "Nudeln", "Quinoa"]
     let milchListe = ["Streukäse", "Sahne", "Joghurt"]
+    gruppenliste.push(gemueseListe, getreideListe, milchliste)
+    for (let i = gruppenListe; i <3; i++) {
+        console.debug(gruppenListe)
+
+    }
 }
 
 /**
