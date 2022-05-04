@@ -58,6 +58,22 @@ function artikelEntfernen() {
  */
 function sortieren() {
     // ToDo: füge ab hier deinen Code ein
+    let gemueseListe = ["Brokoli", "Zwiebeln", "Salat"]
+    let getreideListe = ["Reis", "Nudeln", "Quinoa"]
+    let milchListe = ["Streukäse", "Sahne", "Joghurt"]
+
+    let gruppenListe = []
+
+    gruppenListe.push(gemueseListe, getreideListe, milchListe)
+
+    console.debug("gruppenListe vorher:", gruppenListe)
+
+    for (const gruppenListeElement of gruppenListe) {
+        gruppenListeElement.sort();
+        console.debug("gruppenListe nachher:", gruppenListe)
+
+    }
+
 }
 
 export {
