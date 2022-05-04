@@ -40,8 +40,17 @@ function allesAuflisten() {
  */
 function artikelEntfernen() {
     // ToDo: füge ab hier deinen Code ein
-let gemueseListe = ["Brokoli", "Zwiebeln", "Salat"]
+    let gruppenliste = []
+    let gemueseListe = ["Brokoli", "Zwiebeln", "Salat"]
     gruppenliste.push(gemueseListe)
+   // console.debug(gruppenliste[0])
+    console.debug("gemueseGruppe vorher:", gemueseListe);
+
+    for (let i = 0; i <=2; i++) {
+        gemueseListe.splice(0, 1)
+
+    }
+    return (console.debug("gemueseGruppe nachher:", gemueseListe))
 }
 
 /**
