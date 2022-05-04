@@ -69,10 +69,10 @@ function sortieren() {
     console.debug("gruppenListe vorher:", gruppenListe)
 
     for (const gruppenListeElement of gruppenListe) {
-        gruppenListeElement.sort();
-        console.debug("gruppenListe nachher:", gruppenListe)
 
+        gruppenListeElement.sort()
     }
+    console.debug("gruppenListe nachher:", gruppenListe)
 
 }
 
