@@ -7,10 +7,9 @@
  */
 function artikelAuflisten() {
     // ToDo: füge ab hier deinen Code ein
-let ArtikelAufListen = ["Brokoli", "Reis", "Streukäse"]
-    for (const artikel of ArtikelAufListen) {
+let ArtikelListe = ["Brokoli", "Reis", "Streukäse"]
+    for (const artikel of ArtikelListe) {
         console.debug(artikel)
-
     }
 }
 
@@ -22,6 +21,9 @@ function allesAuflisten() {
     let gruppenListe = []
 
 // ToDo: füge ab hier deinen Code ein
+    let gemueseliste = ["Brokoli", "Zwiebeln", "Salat"]
+    let getreideListe = ["Reis", "Nudeln", "Quinoa"]
+    let milchListe = ["Streukäse", "Sahne", "Joghurt"]
 }
 
 /**
