@@ -7,7 +7,11 @@
  */
 function artikelAuflisten() {
     // ToDo: füge ab hier deinen Code ein
+let ArtikelAufListen = ["Brokoli", "Reis", "Streukäse"]
+    for (const artikel of ArtikelAufListen) {
+        console.debug(artikel)
 
+    }
 }
 
 /**
