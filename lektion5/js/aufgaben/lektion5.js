@@ -21,12 +21,15 @@ function allesAuflisten() {
     let gruppenListe = []
 
 // ToDo: füge ab hier deinen Code ein
-    let gemueseliste = ["Brokoli", "Zwiebeln", "Salat"]
+    let gemueseListe = ["Brokoli", "Zwiebeln", "Salat"]
     let getreideListe = ["Reis", "Nudeln", "Quinoa"]
     let milchListe = ["Streukäse", "Sahne", "Joghurt"]
-    gruppenliste.push(gemueseListe, getreideListe, milchliste)
-    for (let i = gruppenListe; i <3; i++) {
-        console.debug(gruppenListe)
+
+    gruppenListe.push(gemueseListe, getreideListe, milchListe)
+
+    for (let i = 0; i <=2; i++) {
+
+        console.debug("Gruppe", i + ":", gruppenListe[i])
 
     }
 }
@@ -37,7 +40,8 @@ function allesAuflisten() {
  */
 function artikelEntfernen() {
     // ToDo: füge ab hier deinen Code ein
-
+let gemueseListe = ["Brokoli", "Zwiebeln", "Salat"]
+    gruppenliste.push(gemueseListe)
 }
 
 /**
