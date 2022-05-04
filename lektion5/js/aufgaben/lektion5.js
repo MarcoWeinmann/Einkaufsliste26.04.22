@@ -72,6 +72,7 @@ function sortieren() {
 
         gruppenListeElement.sort()
     }
+    gruppenListe.sort()
     console.debug("gruppenListe nachher:", gruppenListe)
 
 }
