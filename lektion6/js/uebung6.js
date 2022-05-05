@@ -63,6 +63,7 @@ function aufgabe5() {
 
   function multiplizieren(a, b) {
     //ToDo: füge ab hier Deinen Code ein
+    return a*b;
   }
 
   console.debug(multiplizieren(3, 5))
@@ -75,6 +76,15 @@ function aufgabe6() {
   console.debug("Aufgabe 6 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+function fakultaet (a){
+  if (a <= 1){
+    return 1
+
+  }
+  else{
+    return a*fakultaet(a-1)
+  }
+}
 
   console.debug(fakultaet(5))
 }
