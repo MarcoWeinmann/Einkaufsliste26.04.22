@@ -9,6 +9,7 @@ function aufgabe1() {
   console.debug("Aufgabe 1 ==========================")
 
   //ToDo: füge ab hier Deinen Code ein
+  console.debug("Diese Funktion kenne ich bereits!")
 }
 
 /**
