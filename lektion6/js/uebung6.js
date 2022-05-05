@@ -48,6 +48,11 @@ function aufgabe4() {
   console.debug("Aufgabe 4 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+  function willkommenZurueck (name) {
+    console.debug("Da bist du ja wieder", name)
+  }
+
+  willkommenZurueck("Marco")
 }
 
 /**
