@@ -19,8 +19,11 @@ function aufgabe2() {
   console.debug("Aufgabe 2 ==========================")
 
   //ToDo: füge ab hier Deinen Code ein
+  function sagHallo (Name) {
+    console.debug("Hallo " + Name)
+  }
 
-  sagHallo("Peter")
+  sagHallo("Marco")
 }
 
 /**
@@ -29,11 +32,13 @@ function aufgabe2() {
 function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
-  function sagBye(name) {
-    console.debug("Bye " + name)
+  function sagBye(Name) {
+    console.debug("Bye " + Name)
   }
 
   //ToDo: füge ab hier Deinen Code ein
+ sagBye("Marco")
+
 }
 
 /**
