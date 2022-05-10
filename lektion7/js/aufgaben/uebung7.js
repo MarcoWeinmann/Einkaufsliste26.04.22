@@ -94,7 +94,15 @@ function aufgabe5() {
   console.debug("Aufgabe 5 ==========================");
 
   //ToDo: füge ab hier deinen Code ein
+class Elektroauto {
+  constructor(farbe) {
+    this.farbe = farbe
 
+  }
+  hupen() {
+    console.debug("honk honk")
+}}
+let tesla = new Elektroauto("grau")
   console.debug(tesla.farbe)
   tesla.hupen()
 }
