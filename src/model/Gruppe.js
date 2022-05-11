@@ -37,6 +37,7 @@ class Gruppe {
 
     }
     }
+    console.debug("artikel nicht gefunden", suchName)
     return null
 
   }
@@ -57,7 +58,7 @@ class Gruppe {
    */
   artikelHinzufuegen(name) {
     // TODO: doppelte Artikel abfangen!
-    let neuerArtikel = new Artikel(name)
+    let neuerArtikel = new Artikel(name, this.artikelListe.length)
     this.artikelListe.push(neuerArtikel)
     return neuerArtikel
   }
@@ -81,8 +82,8 @@ function main() {
   let artikel = new Artikel("nüsse", 0)
   gruppe.artikelHinzufuegen(artikel)
   console.debug(gruppe.artikelListe)
-  gruppe.artikelFinden("")
-  gruppe.artikelFinden("")
+  gruppe.artikelFinden("artikel")
+  gruppe.artikelFinden("xxx")
 
 }
 
