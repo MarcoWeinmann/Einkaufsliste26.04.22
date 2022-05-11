@@ -30,6 +30,15 @@ class Gruppe {
   artikelFinden(suchName, meldungAusgeben) {
     // TODO: füge hier Deinen Code ein
 
+    for (let artikel of this.artikelListe) {
+
+    if (artikel.name == suchName){
+      return artikel
+
+    }
+    }
+    return null
+
   }
 
   /**
@@ -64,3 +73,17 @@ class Gruppe {
   }
 
 }
+
+function main() {
+
+  let zahl = 0
+  let gruppe = new Gruppe("produktGruppe1", 0)
+  let artikel = new Artikel("nüsse", 0)
+  gruppe.artikelHinzufuegen(artikel)
+  console.debug(gruppe.artikelListe)
+  gruppe.artikelFinden("")
+  gruppe.artikelFinden("")
+
+}
+
+main()
