@@ -23,7 +23,7 @@ class Filmliste {
       //usw.
       this.liste.push(i)
     }
-    console.debug(this.liste)
+    //console.debug(this.liste)
 
     for (let i = 0; i < filme.length; i++) {
 
@@ -61,7 +61,11 @@ let film3 = new Film("Enemy at the Gates", 130, 16, "Drama", 2001, false)
 let film4 = new Film("Iron Man", 126, 12, "Action", 2008, false)
 
 let siFiListe = new Filmliste("Scince Fiction")
-let siFiArray = [film1, film2]
+let siFiArray = [film1, film2, film3, film4]
 siFiListe.filmeHinzufügen(siFiArray)
 
 //console.debug(siFiArray)
+
+for (let film of siFiArray) {
+  console.debug("Titel: "+ film.titel+" fsk "+ film.fsk)
+}
