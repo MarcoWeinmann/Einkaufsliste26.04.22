@@ -46,9 +46,8 @@ class Gruppe {
    */
   artikelAuflisten(suchName, gekauft) {
     for (let artikel of this.artikelListe) {
-      if (artikel.name == suchName) {
-        return artikel
-      }
+      if (artikel.gekauft == true) {
+console.debug(artikel.name)      }
     }
     // if (meldungAusgeben) {
     //   App.informieren(`[${this.name}] Artikel "${suchName}" nicht gefunden`, true)
