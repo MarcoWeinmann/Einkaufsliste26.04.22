@@ -13,7 +13,7 @@
 #### Hinweise zur Bearbeitung:
 
 - Die Datei `Gruppe.js` und `Artikel.js` soll für diese Lektion bearbeitet werden in `"js/Gruppe.js"` und "js/Artikel.js"`
-- Das Testen der Aufgaben funktioniert über die Datei `test8.js` in `"lektion7/test/test8.js"`. Diese kann bei Bedarf um
+- Das Testen der Aufgaben funktioniert über die Datei `test7.js` in `"lektion7/test/test7.js"`. Diese kann bei Bedarf um
   weitere Tests ergänzt werden.
 - Achte auf einen sauberen Quellcode, insbesondere Einrückungen sind wichtig!
 - Die App kann nach deiner eigenen Vorstellung angepasst werden. Sei kreativ!
@@ -34,12 +34,15 @@ So soll eine eindeutige id erzeugt werden, die für react benötigt wird.<br> <b
 1. Erstelle eine Klasse mit dem namen `Artikel`
 2. Erstelle einen Konstruktor mit den Parametern `name` und `position`. Füge außerdem als weitere properties `gekauft`und `id` hinzu.
 3. Erstelle oberhalb des Konstruktors die Variable `counter`. Dieser soll der Wert `1` zugewiesen werden. Außerdem soll der `id` (innerhalb des Kosntruktors)
-   dieser `counter` zugewiesen werden und gleichzeitig um eins erhöht werden.
+   dieser `counter` zugewiesen werden und gleichzeitig um eins erhöht werden. Das Zuweisen und Erhöhen kann über folgenden Code innerhalb des Konstruktors erreicht werden: 
+```
+this.id = Artikel.counter++
+```
 4. Füge ans Ende der Klasse folgenden Code hinzu:
    ```
    export {Artikel}
    ```
-   Dieser Code exportiert die Klasse `Artikel` und macht es für die Datei `test8.js` möglich, diese Klasse und ihre
+   Dieser Code exportiert die Klasse `Artikel` und macht es für die Datei `test7.js` möglich, diese Klasse und ihre
    Methoden zu testen
 
 </details>
@@ -65,12 +68,12 @@ dieser `counter` zugewiesen werden und um eins erhöht werden.
    ```
    export {Gruppe}
    ```
-   Dieser Code exportiert die Klasse `Gruppe` und macht es für die Datei `test8.js` möglich, diese Klasse und ihre
+   Dieser Code exportiert die Klasse `Gruppe` und macht es für die Datei `test7.js` möglich, diese Klasse und ihre
    Methoden zu testen
 5. Füge folgenden import dem Anfang der Klasse hinzu: 
 ```
 import Artikel from './Artikel'
-import App from './Shopping'
+import Shopping from './Shopping'
 ```
 
 </details>
@@ -81,7 +84,7 @@ ___
 <details>
 <summary>Aufgabe 3</summary>
 
-Erstelle nun innerhalb der Klasse `Gruppe` die Methode `artikelAuflisten`, die als Paramater einen boolean-wert  `gekauft` nimmt. Dieser steuert die Anzeige, der bereits gekauften oder noch zu kaufenden Artikel.
+Erstelle nun innerhalb der Klasse `Gruppe` die Methode `artikelAuflisten`, die als Parameter einen boolean-wert  `gekauft` nimmt. Dieser steuert die Anzeige, der bereits gekauften oder noch zu kaufenden Artikel.
 Diese Funktion gibt alle Gruppen aus der `gruppenListe` und ihre Artikel auf der Konsole aus. Verwende dafür eine 
 for-of-Schleife
 
@@ -119,7 +122,7 @@ Sie enthält die zwei properties  `gruppenListe`, `aktiveGruppe` und die Methode
 In dieser Aufgabe testen wir nur die Methode `gruppeFinden`.
 
 **Pseudo-Code:**
-1. Schreibe eine Klasse "App" füge folgende properties hinzu:
+1. Schreibe eine Klasse "Shopping" füge folgende properties hinzu:
     - `gruppenListe`
     - `aktiveGruppe`
     - für die Zusatzaufgabe: `setup`
@@ -132,7 +135,7 @@ In dieser Aufgabe testen wir nur die Methode `gruppeFinden`.
    ```
    export {Shopping}
    ```
-   Dieser Code exportiert die Klasse `Shopping` und macht es für die Datei `test8.js` möglich, diese Klasse und ihre
+   Dieser Code exportiert die Klasse `Shopping` und macht es für die Datei `test7.js` möglich, diese Klasse und ihre
    Methoden zu testen
 
 </details>
