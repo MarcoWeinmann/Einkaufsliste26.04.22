@@ -37,10 +37,7 @@ class ShoppingList extends React.Component {
                   <i className="material-icons">expand_less</i>
                 </h2>
                 <dl>
-                  <dt >Hülsenfrüchte
-                    <i className="material-icons">expand_less</i>
-                  </dt>
-                  <dd><label><input type="checkbox"/> <s>Tofu</s></label></dd>
+                  <GruppenTag/>
                 </dl>
               </section>
           </main>

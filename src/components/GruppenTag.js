@@ -16,6 +16,8 @@ class GruppenTag extends React.Component {
         <br/>
 
         <ArtikelTag/>
+        <ArtikelTag/>
+        <ArtikelTag/>
       </React.Fragment>
     )
   }
