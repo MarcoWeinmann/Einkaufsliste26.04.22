@@ -1,19 +1,20 @@
 #root {
     width: 23rem;
-    background-image: url("../img/markt.jpg");
+    background-image: url("../img/Bubble.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: inherit;
+    background-size: 600px;
 }
 #container {
     opacity: 85%;
 }
 :root {
-    --mdc-theme-primary: #33691E;
+    --mdc-theme-primary: #003333;
     --mdc-theme-secondary: #827717;
 }
 dt {
-    background-color: #7CB342;
+    background-color: #330099;
     color: var(--mdc-theme-on-primary);
 }
 h2, dd {
