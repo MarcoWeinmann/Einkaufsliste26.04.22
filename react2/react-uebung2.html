@@ -93,8 +93,12 @@ function Wiederholt(props){
 <script type="text/babel">
 
   //ToDo: Schreibe hier deine Klasse mit props! Vergesse nicht, deinen Namen unten zu schreiben!
-
-  const element5 = <Vorname name="//ToDO: Schreibe hier deinen Namen" />;
+class Vorname extends React.Component {
+  render() {
+    return <div>Du wirst langsam echt gut in React, {this.props.name}</div>
+  }
+}
+  const element5 = <Vorname name= "Marco" />;
   ReactDOM.render(
     element5,
     document.getElementById(`root5`)
@@ -121,7 +125,11 @@ function Wiederholt(props){
   }
 
   //ToDo: Schreibe hier deine ReactDOM render Funktion!
-
+  const element6 = App()
+  ReactDOM.render(
+          element6,
+          document.getElementById(`root6`)
+  );
 </script>
 
 </body>
