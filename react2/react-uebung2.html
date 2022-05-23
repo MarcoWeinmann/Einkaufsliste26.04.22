@@ -19,7 +19,10 @@
 <script type="text/babel">
 
   //ToDo: Schreibe hier deine Funktion Hallo!
-  
+  function Hallo () {
+    return <h1>Hallo React!</h1>
+  }
+
   const element = <Hallo />;
   ReactDOM.render(
     element,
@@ -33,6 +36,13 @@
 <script type="text/babel">
 
   //ToDo: Schreibe hier deine Klasse Tag!
+class Tag extends React.Component{
+  render() {
+    return <h1>Heute ist ein schöner Tag!</h1>
+  }
+
+
+  }
 
   const element2 = <Tag />;
   ReactDOM.render(
@@ -47,8 +57,11 @@
 <script type="text/babel">
 
   //ToDo: Schreibe hier deine Funktion mit props! Vergesse nicht, deinen Namen unten zu schreiben!
+function Hey (probs) {
+ return <div>Hey, {probs.name}</div>
+}
 
-  const element3 = <Hey name="//ToDo: Schreibe hier deinen Namen" />;
+  const element3 = <Hey name=" Alfred" />;
   ReactDOM.render(
     element3,
     document.getElementById(`root3`)
@@ -61,8 +74,13 @@
 <script type="text/babel">
 
   //ToDo: Schreibe hier deine Funktion "Wiederholt"!
+function Wiederholt(props){
+  return Hey (props)
+}
 
-  const element4 = <Wiederholt />;
+  const element4 = [<Wiederholt name="Hassan" />,
+    <Wiederholt name="Julian" />,
+    <Wiederholt name="Karl" />,]
   ReactDOM.render(
     element4,
     document.getElementById('root4')
