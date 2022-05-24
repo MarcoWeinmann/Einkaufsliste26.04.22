@@ -29,7 +29,7 @@ class Calculator extends React.Component {
         let celsius, fahrenheit = temperature
 
         /* ToDO: Ersetze hier 'true' durch die in der Aufgabe beschriebene Bedingung*/
-        if(true){
+        if(scale == "f"){
             celsius = tryConvert(temperature, toCelsius)
         }else{
             fahrenheit = tryConvert(temperature, toFahrenheit)
