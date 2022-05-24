@@ -14,8 +14,8 @@ class TemperatureInput extends React.Component {
         /* ToDO: Verwende hier die props, um den beiden Konstanten einen von den props abhängenden
             Wert zu geben */
 
-        const temperature = 0
-        const scale = ''
+        const temperature = this.props.temperature
+        const scale = this.props.scale
         return (
             <fieldset>
                 <legend>Enter temperature in {scale}:</legend>
