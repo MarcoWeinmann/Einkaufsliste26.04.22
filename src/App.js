@@ -46,7 +46,19 @@ class App extends React.Component {
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
     // App.informieren mit 'aktion'
     // 'state' aktualisieren
-  }
+    artikel.gekauft = !artikel.gekauft
+    let aktion
+    if (artikel.gekauft == true){
+      aktion = "erledigt"
+    }else {
+      aktion = "unerledigt"
+    }
+    Modell.informieren(`${artikel.name} "ist" ${aktion}`)
+  
+  this.setState(this.state)
+
+  
+}
 
   artikelHinzufuegen() {
     // ToDo: implementiere diese Methode
