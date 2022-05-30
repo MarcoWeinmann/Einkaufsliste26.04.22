@@ -56,7 +56,6 @@ class App extends React.Component {
     Modell.informieren(`${artikel.name} "ist" ${aktion}`)
   
   this.setState(this.state)
-
   
 }
 
