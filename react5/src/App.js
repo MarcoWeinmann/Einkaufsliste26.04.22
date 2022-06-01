@@ -4,7 +4,7 @@ function App() {
   return (
    <div>
      <h2>Aufgabe 1</h2>
-     <Gruesse isLoggedIn={false} />
+     <Gruesse isLoggedIn={true} />
 
      <h2>Aufgabe 2</h2>
 
