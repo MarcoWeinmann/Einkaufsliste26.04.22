@@ -105,15 +105,23 @@ export default LoginControl
  */
 export function Mailbox(props) {
   const ungeleseneNachrichten = props.ungeleseneNachrichten;
+  let nachrichten = []
+  for (const nachricht of ungeleseneNachrichten) {
+    nachrichten.push(<div>{nachricht}</div>)
+  }
+
   return (
       <div>
 
         <h1>Willkommen zu deiner Mailbox!</h1>
-        {//ToDo: Hier die Bedingung und den Operator einfügen
+        { //ToDo: Hier die Bedingung und den Operator einfügen
+        ungeleseneNachrichten.length > 0 &&
             <h2>
               Du hast {ungeleseneNachrichten.length} ungelesene Nachrichten.
             </h2>
         }
+        {nachrichten}
+
       </div>
   );
 }
@@ -136,7 +144,7 @@ export class NutzerGruessung extends React.Component {
 
   //ToDo: Schreibe hier deinen Code statt des Rückgabewerts null!
     render(){
-      return null
+      return (this.state.isLoggedIn ? "Wilkommen zurück!" : "Bitte registrieren sie sich")
     }
 }
 
