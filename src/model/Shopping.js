@@ -48,7 +48,6 @@ class Shopping {
     if (!vorhandeneGruppe) {
       let neueGruppe = new Gruppe(name, this.gruppenListe.length)
       this.gruppenListe.push(neueGruppe)
-      this.aktiveGruppe = neueGruppe
       this.informieren("[App] Gruppe \"" + name + "\" hinzugefügt")
       return neueGruppe
     } else {
@@ -171,36 +170,40 @@ class Shopping {
   speichern(daten) {
     const json = {
       gruppenListe: this.gruppenListe,
-      aktiveGruppeName: this.aktiveGruppe.name,
+      aktiveGruppeName: this.aktiveGruppe?.name,
     }
-    // Object.assign(json, daten)
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(json))
   }
 
   /**
    * Lädt den Modell-Zustand aus dem LocalStorage
-   * @return {Boolean} erfolg - meldet, ob die Daten erfolgreich aus dem LocalStorage geladen wurden
+   * @return {Boolean} erfolg - meldet, ob die Daten erfolgreich gelesen wurden
    */
   laden() {
     const daten = localStorage.getItem(this.STORAGE_KEY)
-    if (!daten) return false
-    this.initialisieren(JSON.parse(daten))
-    return true
+    if (daten) {
+      this.initialisieren(JSON.parse(daten))
+      this.informieren("[App] Daten aus dem LocalStorage geladen")
+      return true
+    }
+    return false
   }
 
   /**
    * Initialisiert das Modell aus dem LocalStorage
    * @param {Object} jsonDaten - die übergebenen JSON-Daten
    */
-  initialisieren(jsonDaten, ) {
+  initialisieren(jsonDaten) {
     this.gruppenListe = []
-    for(let gruppe of jsonDaten.gruppenListe) {
+    for (let gruppe of jsonDaten.gruppenListe) {
       let neueGruppe = this.gruppeHinzufuegen(gruppe.name)
       for (let artikel of gruppe.artikelListe) {
         neueGruppe.artikelObjektHinzufuegen(artikel)
       }
     }
-    this.aktiveGruppe = this.gruppeFinden(jsonDaten.aktiveGruppeName)
+    if (jsonDaten.aktiveGruppeName) {
+      this.aktiveGruppe = this.gruppeFinden(jsonDaten.aktiveGruppeName)
+    }
   }
 }
 

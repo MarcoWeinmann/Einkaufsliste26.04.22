@@ -1,6 +1,11 @@
 import React from 'react'
 import ArtikelTag from './ArtikelTag'
 
+/**
+ * Diese Komponente repräsentiert eine Artikelgruppe
+ * Props:
+ * @property {Gruppe} gruppe - die aktuelle Gruppe
+ */
 class GruppenTag extends React.Component {
   constructor(props) {
     super(props)
@@ -9,13 +14,20 @@ class GruppenTag extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let aufgeklappt = localStorage.getItem("gruppe-" + this.props.gruppe.id)
+    aufgeklappt = (aufgeklappt == null) ? true : JSON.parse(aufgeklappt)
+    this.setState({aufgeklappt: aufgeklappt})
+  }
+
   artikelEntfernen(name) {
     this.props.gruppe.artikelEntfernen(name)
-    // this.props.aktiveGruppeHandler(this.props.gruppe)
-    this.forceUpdate()
+    this.props.aktiveGruppeHandler(this.props.gruppe)
   }
 
   aufZuKlappen() {
+    const neuerZustand = !this.state.aufgeklappt
+    localStorage.setItem("gruppe-" + this.props.gruppe.id, neuerZustand)
     this.setState({aufgeklappt: !this.state.aufgeklappt})
   }
 

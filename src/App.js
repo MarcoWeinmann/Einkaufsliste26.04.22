@@ -21,7 +21,18 @@ class App extends React.Component {
     if (!Modell.laden()) {
       this.initialisieren()
     }
-    this.setState(this.state)
+    // Auf-/Zu-Klapp-Zustand aus dem LocalStorage laden
+    let einkaufenAufgeklappt = localStorage.getItem("einkaufenAufgeklappt")
+    einkaufenAufgeklappt = (einkaufenAufgeklappt == null) ? true : JSON.parse(einkaufenAufgeklappt)
+
+    let erledigtAufgeklappt = localStorage.getItem("erledigtAufgeklappt")
+    erledigtAufgeklappt = (erledigtAufgeklappt == null) ? false : JSON.parse(erledigtAufgeklappt)
+
+    this.setState({
+      aktiveGruppe: Modell.aktiveGruppe,
+      einkaufenAufgeklappt: einkaufenAufgeklappt,
+      erledigtAufgeklappt: erledigtAufgeklappt
+    })
   }
 
   initialisieren() {
@@ -40,15 +51,21 @@ class App extends React.Component {
   }
 
   einkaufenAufZuKlappen() {
-    let neuerZustand = !this.state.einkaufenAufgeklappt
-    const aufklappZustand = {einkaufenAufgeklappt: neuerZustand}
-    this.setState(aufklappZustand)
+    const neuerZustand = !this.state.einkaufenAufgeklappt
+    localStorage.setItem("einkaufenAufgeklappt", neuerZustand)
+    this.setState({einkaufenAufgeklappt: neuerZustand})
   }
 
   erledigtAufZuKlappen() {
-    let neuerZustand = !this.state.erledigtAufgeklappt
-    const aufklappZustand = {erledigtAufgeklappt: neuerZustand}
-    this.setState(aufklappZustand)
+    const neuerZustand = !this.state.erledigtAufgeklappt
+    localStorage.setItem("erledigtAufgeklappt", neuerZustand)
+    this.setState({erledigtAufgeklappt: neuerZustand})
+  }
+
+  lsLoeschen() {
+    if (confirm("Wollen Sie wirklich alles löschen?!")) {
+      localStorage.clear()
+    }
   }
 
   artikelChecken = (artikel) => {
@@ -143,7 +160,7 @@ class App extends React.Component {
           <section>
             <h2>Noch zu kaufen
               <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
-                {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
+                {nochZuKaufenIcon}
               </i>
             </h2>
             <dl>
@@ -175,9 +192,10 @@ class App extends React.Component {
             <span className="material-icons">sort</span>
             <span className="mdc-button__ripple"></span> Sort
           </button>
-          <button className="mdc-button mdc-button--raised">
-            <span className="material-icons">settings</span>
-            <span className="mdc-button__ripple"></span> Setup
+          <button className="mdc-button mdc-button--raised"
+                  onClick={this.lsLoeschen}>
+            <span className="material-icons">clear_all</span>
+            <span className="mdc-button__ripple"></span> Clear
           </button>
         </footer>
 
