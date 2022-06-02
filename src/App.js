@@ -19,18 +19,18 @@ class App extends React.Component {
   }
 
   initialisieren() {
-    let fantasy = Modell.gruppeHinzufuegen("Fantasy")
-    let film1 = fantasy.artikelHinzufuegen("Der Dunkle Kristall")
-    fantasy.artikelHinzufuegen("Die Barbaren")
-    fantasy.artikelHinzufuegen("Der Herr der Ringe")
-    let scifi = Modell.gruppeHinzufuegen("Science Fiction")
-    let film2 = scifi.artikelHinzufuegen("Alita - Battle Angel")
-    scifi.artikelHinzufuegen("Mad Max - Fury Road")
-    scifi.artikelHinzufuegen("Avatar")
-    let dokus = Modell.gruppeHinzufuegen("Dokumentationen")
-    dokus.artikelHinzufuegen("Die Kabale")
-    dokus.artikelHinzufuegen("Endgame - Blaupause für die Globale Versklavung")
-    dokus.artikelHinzufuegen("Die Wüste lebt")
+    let fantasy = Modell.gruppeHinzufuegen("Obst und Gemüse")
+    let film1 = fantasy.artikelHinzufuegen("Kartoffeln")
+    fantasy.artikelHinzufuegen("Tomaten")
+    fantasy.artikelHinzufuegen("Trauben")
+    let scifi = Modell.gruppeHinzufuegen("Milchprodukte")
+    let film2 = scifi.artikelHinzufuegen("Yoghurt")
+    scifi.artikelHinzufuegen("Milch")
+    scifi.artikelHinzufuegen("Butter")
+    let dokus = Modell.gruppeHinzufuegen("Getreideprodukte")
+    dokus.artikelHinzufuegen("Müsli")
+    dokus.artikelHinzufuegen("Nudeln")
+    dokus.artikelHinzufuegen("Reis")
   }
 
   einkaufenAufZuKlappen() {
@@ -115,7 +115,7 @@ class App extends React.Component {
     return (
       <div id="container">
         <header>
-          <h1>Watchlist</h1>
+          <h1>Einkaufsliste</h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>

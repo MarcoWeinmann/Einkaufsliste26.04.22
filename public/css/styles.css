@@ -1,10 +1,10 @@
 #root {
     width: 23rem;
-    background-image: url("../img/Bubble.jpeg");
+    background-image: url("../img/KalenderScreen.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
-    background-size: 600px;
+    background-size: 400px;
 }
 #container {
     opacity: 85%;
