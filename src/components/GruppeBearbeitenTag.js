@@ -17,7 +17,7 @@ class GruppeBearbeitenTag extends React.Component {
 
   /**
    * benennt eine Gruppe um
-   * @param {gruppe} - Gruppe umbenennen
+   * @param {gruppe} - benennt eine Gruppe um
    * @param {event} - vom User ausgelöstes Event
    * */
   gruppeUmbenennen(gruppe, event) {
