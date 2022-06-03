@@ -26,7 +26,7 @@ class Gruppe {
    * Sucht einen Artikel anhand seines Namens
    * @param {String} suchName - Name des gesuchten Artikels
    * @param {Boolean} meldungAusgeben - steuert, ob eine Meldung ausgegeben wird
-   * @returns {Artikel|null}
+   * @returns {Artikel|null} artikel - der gefundene Artikel bzw. `null`, wenn nichts gefunden wurde
    */
   artikelFinden(suchName, meldungAusgeben) {
     for (let artikel of this.artikelListe) {
