@@ -39,14 +39,18 @@ class App extends React.Component {
     })
   }
 
-  /* klappt Kategorie einkaufen auf oder zu */
+  /**
+   *  klappt Kategorie einkaufen auf oder zu
+   *  */
   einkaufenAufZuKlappen() {
     const neuerZustand = !this.state.einkaufenAufgeklappt
     localStorage.setItem("einkaufenAufgeklappt", neuerZustand)
     this.setState({einkaufenAufgeklappt: neuerZustand})
   }
 
-  /* klappt Kategorie erledigt auf oder zu */
+  /**
+   *  klappt Kategorie erledigt auf oder zu
+   *  */
   erledigtAufZuKlappen() {
     const neuerZustand = !this.state.erledigtAufgeklappt
     localStorage.setItem("erledigtAufgeklappt", neuerZustand)
@@ -70,7 +74,9 @@ class App extends React.Component {
     this.setState(this.state)
   }
 
-/* fügt einen Artikel der aktiven Gruppe hinzu */
+  /**
+   *  fügt einen Artikel der aktiven Gruppe hinzu
+   *  */
   artikelHinzufuegen() {
     const eingabe = document.getElementById("artikelEingabe")
     const artikelName = eingabe.value.trim()
@@ -82,14 +88,21 @@ class App extends React.Component {
     eingabe.focus()
   }
 
-  /*  Markiert die aktive Gruppe farbig und fügt nur in der aktive Gruppe Artikel hinzu  */
+  /**
+   *  Markiert die aktive Gruppe farbig und fügt nur in der aktive Gruppe Artikel hinzu
+   *  @param {gruppe} gruppe - Aktuelle Gruppe die als aktive Gruppe gesetzt werden soll
+   *  */
   setAktiveGruppe(gruppe) {
     Modell.aktiveGruppe = gruppe
     Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
     this.setState({aktiveGruppe: Modell.aktiveGruppe})
   }
 
-  /* Schließt den Sortierdialog */
+  /**
+   *  Schließt den Sortierdialog
+   *  @param {reihenfolge} - Eigene Reihenfolge
+   *  @param {sortieren} - aufsteigend, absteigend
+   *  */
   closeSortierDialog = (reihenfolge, sortieren) => {
     if (sortieren) {
       Modell.sortieren(reihenfolge)

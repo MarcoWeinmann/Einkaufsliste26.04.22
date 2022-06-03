@@ -25,13 +25,18 @@ class GruppenTag extends React.Component {
     this.setState({aufgeklappt: aufgeklappt})
   }
 
-  /* entfernt Artikel */
+  /**
+   *  entfernt Artikel
+   *  @param {name} - entfernt name des Artikels
+   *  */
   artikelEntfernen(name) {
     this.props.gruppe.artikelEntfernen(name)
     this.props.aktiveGruppeHandler(this.props.gruppe)
   }
 
-  /* klappt auf oder zu */
+  /**
+   *  klappt auf oder zu
+   *  */
   aufZuKlappen() {
     const neuerZustand = !this.state.aufgeklappt
     localStorage.setItem("gruppe-" + this.props.gruppe.id, neuerZustand)

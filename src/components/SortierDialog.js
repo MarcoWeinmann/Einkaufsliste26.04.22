@@ -8,7 +8,10 @@ class SortierDialog extends React.Component {
       sortierung: Modell.sortierung
     }
   }
-/* rerendert die Sortierung */
+  /**
+  * rerendert die Sortierung
+   * @param {event} - vom User ausgelöstes Event
+   * */
   handleChange(event) {
     this.setState({sortierung: event.target.value})
   }

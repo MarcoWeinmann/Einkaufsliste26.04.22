@@ -27,14 +27,16 @@ h1{
     margin: 1px;
     color: white;
     text-align: center;
+    -webkit-text-stroke: 1px black;
 
 }
 dl {
     margin: 1px;
 }
 h2 {
-    margin: 1px;
+    margin: 10px;
     padding: 0 0 10px 0;
+    border-radius: 5px;
 }
 i.material-icons {
     cursor: pointer;
@@ -52,6 +54,8 @@ dt {
     display: flex;
     font-weight: 500;
     padding: 3px 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 dt span {
     width: 100%;
@@ -63,7 +67,8 @@ dt, dd {
 dd {
     display: flex;
     margin-left: 0;
-    margin: 6px;
+    margin: 10px;
+    border-radius: 5px;
 }
 dd label {
     padding: 3px 0;
@@ -78,7 +83,7 @@ dd input[type="search"] {
 }
 .mdc-text-field {
     height: 2rem;
-    margin: 14px;
+    margin: 16px;
     border-radius: 5px;
 }
 
