@@ -24,7 +24,7 @@ h2, dd {
 .aktiv { background-color: #4b81d6 }
 .inaktiv { background-color: #7CB342 }
 h1, h2, dl {
-    margin: 0;
+    margin: 1px;
 }
 h2 {
     padding: 0 0 10px 0;
@@ -56,7 +56,7 @@ dt, dd {
 dd {
     display: flex;
     margin-left: 0;
-    margin: 3px;
+    margin: 6px;
 }
 dd label {
     padding: 3px 0;
