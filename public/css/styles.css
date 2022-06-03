@@ -1,5 +1,5 @@
 #root {
-    width: 23rem;
+    width: 25rem;
     background-image: url("../img/KalenderScreen.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -23,10 +23,17 @@ h2, dd {
 
 .aktiv { background-color: #4b81d6 }
 .inaktiv { background-color: #7CB342 }
-h1, h2, dl {
+h1{
+    margin: 1px;
+    color: white;
+    text-align: center;
+
+}
+dl {
     margin: 1px;
 }
 h2 {
+    margin: 1px;
     padding: 0 0 10px 0;
 }
 i.material-icons {
@@ -71,6 +78,8 @@ dd input[type="search"] {
 }
 .mdc-text-field {
     height: 2rem;
+    margin: 14px;
+    border-radius: 5px;
 }
 
 label {

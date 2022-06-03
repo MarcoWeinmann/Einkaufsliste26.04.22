@@ -6,7 +6,7 @@ import SortierDialog from "./components/SortierDialog";
 
 /**
  * @version 1.0
- * @author Alfred Walther <alfred.walther@syntax-institut.de>
+ * @author Marco Weinmann <marco.wm94@gmail.com>
  * @description Diese App ist eine Einkaufsliste mit React.js und separatem Model, welche Offline verwendet werden kann
  * @license Gnu Public Lesser License 3.0
  *
@@ -39,12 +39,14 @@ class App extends React.Component {
     })
   }
 
+  /* klappt Kategorie einkaufen auf oder zu */
   einkaufenAufZuKlappen() {
     const neuerZustand = !this.state.einkaufenAufgeklappt
     localStorage.setItem("einkaufenAufgeklappt", neuerZustand)
     this.setState({einkaufenAufgeklappt: neuerZustand})
   }
 
+  /* klappt Kategorie erledigt auf oder zu */
   erledigtAufZuKlappen() {
     const neuerZustand = !this.state.erledigtAufgeklappt
     localStorage.setItem("erledigtAufgeklappt", neuerZustand)
@@ -68,6 +70,7 @@ class App extends React.Component {
     this.setState(this.state)
   }
 
+/* fügt einen Artikel der aktiven Gruppe hinzu */
   artikelHinzufuegen() {
     const eingabe = document.getElementById("artikelEingabe")
     const artikelName = eingabe.value.trim()
@@ -79,12 +82,14 @@ class App extends React.Component {
     eingabe.focus()
   }
 
+  /*  Markiert die aktive Gruppe farbig und fügt nur in der aktive Gruppe Artikel hinzu  */
   setAktiveGruppe(gruppe) {
     Modell.aktiveGruppe = gruppe
     Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
     this.setState({aktiveGruppe: Modell.aktiveGruppe})
   }
 
+  /* Schließt den Sortierdialog */
   closeSortierDialog = (reihenfolge, sortieren) => {
     if (sortieren) {
       Modell.sortieren(reihenfolge)
@@ -137,7 +142,7 @@ class App extends React.Component {
     return (
       <div id="container">
         <header>
-          <h1>Watchlist</h1>
+          <h1><u>Einkaufsliste</u></h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>
