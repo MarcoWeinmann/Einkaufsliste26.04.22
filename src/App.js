@@ -24,9 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (!Modell.laden()) {
-      this.initialisieren()
-    }
+    Modell.laden()
     // Auf-/Zu-Klapp-Zustand aus dem LocalStorage laden
     let einkaufenAufgeklappt = localStorage.getItem("einkaufenAufgeklappt")
     einkaufenAufgeklappt = (einkaufenAufgeklappt == null) ? true : JSON.parse(einkaufenAufgeklappt)
